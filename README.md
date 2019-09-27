@@ -26,7 +26,7 @@ gem install sass
 go to the directory where you want to download or clone the scss branch and open cmd :
 
 ```bash
-git clone
+git clone -b scss --single-branch https://github.com/PandorAstrum/boilerplate.git
 ```
 
 #### Folder Structure
