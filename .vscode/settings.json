@@ -1,0 +1,19 @@
+{
+    "runOnSave.statusMessageTimeout": 3000,
+    "runOnSave.commands": [
+        {
+            "match": ".*\\.scss$",
+            "notMatch": "[\\\\\\/]_[^\\\\\\/]*\\.scss$",
+            "command": "sass ${file} ${fileDirname}/css/${fileBasenameNoExtension}.css",
+            "runIn": "backend",
+            "runningStatusMessage": "Compiling ${fileBasename}",
+            "finishStatusMessage": "${fileBasename} compiled"
+        },
+        {
+            "match": ".*\\.less$",
+            "notMatch": "[\\\\\\/]_[^\\\\\\/]*\\.less$",
+            "command": "node-sass ${file} ${fileDirname}/${fileBasenameNoExtension}.css",
+            "runIn": "terminal"
+        }
+    ]
+}
