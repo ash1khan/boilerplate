@@ -1,41 +1,71 @@
-# Boilerplate 
-> This is a collection of numerous boilerplate written from scratch. In day to day use on the go. 
+# Boilerplate (**SCSS**)
+> This is a boilerplate code for scss. Everything setup as to up and running quickly 
 
-Everything organized as branch. So choose appropriate branch and follow the steps to up and running in no time
 
-## Contains
-- [Redis](#redis-folder)    
-[![Redis Version][redis-image]][redis-url]
-- [Scss](#scss-folder)  
 [![Scss Version][scss-image]][scss-url]
-
-
-
-## Scss Folder 
-[![Scss Version][scss-image]][scss-url]
-#### Requirement (windows)
+### Requirement (Windows)
 - [x] [Ruby](https://rubyinstaller.org/) 
 
-#### Installation (windows)
-After installing ruby and make sure the PATH environmental was checked on installation of ruby. Open cmd and run:
+### Installation (Windows)
+* When installing ruby, make sure the **PATH environment variable** was checked on installation of ruby. Open cmd and run:
 
 ```bash
 gem install sass
 ```
 
-go to the directory where you want to download or clone the scss branch and open cmd :
+* Go to the directory where you want to download or clone the scss branch and open cmd :
 
 ```bash
 git clone -b scss --single-branch https://github.com/PandorAstrum/boilerplate.git
 ```
 
-#### Folder Structure
+### Folder Structure
+*project root (Scss)*
+
+    ├── assets (folder)                     # contains all the assets
+    │   ├── css (folder)                    # compile and build output folder for scss file into css
+    │   │
+    │   └── partials (folder)               # contains partials for scss
+    │       ├── _colors.scss                # contains color variables
+    │       ├── _mixins.scss                # contains mixins functions to reuse
+    │       ├── _sizes.scss                 # contans size variables
+    │       └── _typography.scss            # contans font variables
+    │
+    ├── compile.sh                          # contains bash script to compile scss to css
+    │
+    └── index.html                          # contains demo html file 
 
 #### Usage
 For compiling sass or scss file into css run the compile.sh file like this
 
 ```bash
 sh compile.sh
+```
+
+#### Tips
+* If you are using vs code install the plugin "Run on Save" and open settings json (run on save user settings) and add this code so that
+in every save of main.scss file it will build automatically.
+Feel free to change the directories
+
+```json
+{
+    "runOnSave.statusMessageTimeout": 3000,
+    "runOnSave.commands": [
+        {
+            "match": ".*\\.scss$",
+            "notMatch": "[\\\\\\/]_[^\\\\\\/]*\\.scss$",
+            "command": "sass ${file} ${fileDirname}/css/${fileBasenameNoExtension}.css",
+            "runIn": "backend",
+            "runningStatusMessage": "Compiling ${fileBasename}",
+            "finishStatusMessage": "${fileBasename} compiled"
+        }
+    ]
+}
+```
+
+* To initiate sass shell open up cmd and type :
+```bash
+sass --interactive
 ```
 
 <!-- Markdown link & img dfn's -->

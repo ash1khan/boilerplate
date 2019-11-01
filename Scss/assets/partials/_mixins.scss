@@ -1,0 +1,80 @@
+// === MIXIN ===
+// This file contains all the mixin formula for the main file
+
+// google font imports mixin
+@mixin google-font($font) {
+    $font: unquote($font);
+    @import url(https://fonts.googleapis.com.css?family=#{$font});
+}
+
+// media queries mixin
+@mixin tiny-screen() {
+    @media only screen and (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin small-screen() {
+    @media only screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin medium-screen() {
+    @media only screen and (max-width: 680px) {
+        @content;
+    }
+}
+
+@mixin large-screen() {
+    @media only screen and (max-width: 960px) {
+        @content;
+    }
+}
+
+@mixin xlarge-screen() {
+    @media only screen and (max-width: 1080px) {
+        @content;
+    }
+}
+// standard mixin
+@mixin links {
+    a {
+        font-style: italic;
+        text-decoration: none;
+    }
+}
+
+@mixin warning {
+    background-color: orange;
+    color: white;
+}
+
+// content mixing examples
+@mixin apply-to-ie-6 {
+    * html {
+        @content;
+    }
+}
+
+// simple argument mixin
+@mixin border($border) {
+    // add border 
+    border: $border;
+}
+
+// default argument mixin
+@mixin rounded($radius: 5px) {
+    // make something round
+    border-radius: $radius;
+}
+
+// add shadows one or multiple multiple argument mixin
+@mixin shadows($shadows...) {
+    box-shadow: $shadows;
+    -moz-box-shadow: $shadows;
+    -webkit-box-shadow: $shadows;
+}
+
+
+

@@ -1,6 +1,62 @@
+// Main style entry point
+
+/* import types 
+@import url();
+@import "http://";
+@import "filename";
+@import "style-screen"; */
+
+// IMPORTS =========================================
+@import "partials/colors";                  // import all colors
+@import "partials/typography";              // import all fonts
+@import "partials/mixins";                  // import all mixin formula
+@import "partials/sizes";                   // import all sizes
+
+// @include links;
+
+// === DEFAULT ELEMENTS ===
 body {
-    background: #353535;
-    p {
-        font-size: 48pt;
+    background: $base;
+    font-family: $main-font;
+    color: $main-text;
+    @include large-screen {
+        font-size: 125%;
+    }
+}
+
+h1, h2, h3, h4 {
+    font-family: $headline-font;
+}
+
+p {
+    font-family: $paragraph-font;
+}
+
+@include links;
+a { 
+    color: $link;
+}
+
+// extra style here 
+.warning-button {
+    @include warning;
+    padding: 8px 12px;
+}
+
+.header {
+    text-align: center;
+    width: $content-width;
+    background: $primary;
+    @include rounded(10px);
+    @include large-screen {
+        width: auto;
+    }
+}
+
+.content {
+    text-align: center;
+    width: $content-width;
+    @include large-screen {
+        width: auto;
     }
 }
