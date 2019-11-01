@@ -1,34 +1,49 @@
-# Boilerplate 
-> This is a collection of numerous boilerplate written from scratch. In day to day use on the go. 
+# EXAMPLE Product Name 
+> Short blurb about what your product does.
 
-Everything organized as branch. So choose appropriate branch and follow the steps to up and running in no time
+[![Python Version][python-image]][python-url]
+[![NPM Version][npm-image]][npm-url]
+[![Downloads Stats][npm-downloads]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Build Status][appveyor-image]][appveyor-url]
 
-## Contains
-- [Redis](#redis-folder)    
-[![Redis Version][redis-image]][redis-url]
-- [Scss](https://github.com/PandorAstrum/boilerplate/tree/scss)  
-[![Scss Version][scss-image]][scss-url]
+One to two paragraph statement about your product and what it does.
 
+![header-pic]
 
+## Installation & Setup
 
+OS X & Linux & Windows:
 
+```bash
+npm install my-crazy-module --save
+pip install -r requirements.txt
+```
 
+Download (Extras): 
+- [NPM](https://www.npmjs.com/get-npm)
+- [VS CODE](https://code.visualstudio.com/)
 
-<!-- Markdown link & img dfn's -->
-[redis-image]: https://img.shields.io/badge/Redis-2.4-yellow.svg?style=for-the-badge&logo=redis
-[redis-url]: https://www.python.org/
+## Usage example
 
-[scss-image]: https://img.shields.io/badge/Sass-3.7.4-yellow.svg?style=for-the-badge&logo=sass
-[scss-url]: https://www.npmjs.com/
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
+A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
-[travis-image]: https://travis-ci.org/PandorAstrum/_vault.svg?branch=master
-[travis-url]: https://travis-ci.org/PandorAstrum/_vault
+To compile the project run:
+```
+truffle compile
+```
 
-[appveyor-image]: https://ci.appveyor.com/api/projects/status/8dxrtild5jew79pq?svg=true
-[appveyor-url]: https://ci.appveyor.com/project/PandorAstrum/vault
+To migrate the project run:
+```
+truffle migrate
+```
 
-[ReadTheDoc]: https://github.com/yourname/yourproject/wiki
+To test the project run:
+```
+truffle test
+```
+
+_For more examples and usage, please refer to the [ReadTheDoc][ReadTheDoc]._
 
 
 ## Release History
@@ -61,3 +76,22 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
+
+<!-- Markdown link & img dfn's -->
+[python-image]: https://img.shields.io/badge/Python-3.6-yellowgreen.svg?style=flat-square
+[python-url]: https://www.python.org/
+
+[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/
+[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
+
+[travis-image]: https://travis-ci.org/PandorAstrum/_vault.svg?branch=master
+[travis-url]: https://travis-ci.org/PandorAstrum/_vault
+
+[appveyor-image]: https://ci.appveyor.com/api/projects/status/8dxrtild5jew79pq?svg=true
+[appveyor-url]: https://ci.appveyor.com/project/PandorAstrum/vault
+
+[ReadTheDoc]: https://github.com/yourname/yourproject/wiki
+
+<!-- Header Pictures and Other media-->
+[header-pic]: header.png
