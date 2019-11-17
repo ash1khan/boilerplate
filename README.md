@@ -1,9 +1,10 @@
 # Boilerplate (**UML**)
-> This is a boilerplate uml codes setup for up and running on the go
-
-This boilerplate uses [PlantUML][plantuml-url]
+> This is a boilerplate uml codes setup for copy/paste and edit for own projetc usage
 
 [![uml-image]][uml-url]
+
+This boilerplate uses [PlantUML][plantuml-url] . All example uml files contain description what does it use for ?
+
 ### Requirement (Windows)
 - [x] [Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
 - [x] [graphVIZ](https://www.graphviz.org/)
@@ -27,25 +28,29 @@ git clone -b uml --single-branch https://github.com/PandorAstrum/boilerplate.git
 *project root (uml)*
 
     ├── diagrams (folder)           # contains diagram examples
-    │   ├── activity.puml            
-    │   ├── class.puml 
-    │   ├── component.puml 
-    │   ├── deployment.puml 
-    │   ├── object.puml 
-    │   ├── sequence.puml 
-    │   ├── state.puml 
-    │   ├── timing.puml  
-    │   └── usecase.puml
+    │   │
+    │   ├── behavioral diagrams (folder)
+    │   │   ├── activity.puml
+    │   │   ├── sequence.puml
+    │   │   ├── state.puml
+    │   │   ├── timing.puml
+    │   │   └── usecase.puml
+    │   │
+    │   └── structural diagrams (folder)
+    │       ├── class.puml    
+    │       ├── component.puml
+    │       ├── deployment.puml
+    │       └── object.puml
     │
     ├── non-diagrams (folder)       # contains other examples 
-    │   ├── archimate.puml            
-    │   ├── ditta.puml 
-    │   ├── entity-relationship.puml 
-    │   ├── gantt.puml 
-    │   ├── mindmap.puml 
-    │   ├── sdl.puml 
-    │   ├── wireframe-graphical.puml 
-    │   └── work-breakdown-structure.puml    
+    │   ├── archimate.puml           
+    │   ├── ditta.puml
+    │   ├── entity-relationship.puml
+    │   ├── gantt.puml
+    │   ├── mindmap.puml
+    │   ├── sdl.puml
+    │   ├── wireframe-graphical.puml
+    │   └── work-breakdown-structure.puml
     │
     └── style.puml                 # contains styles definition 
 
@@ -54,7 +59,35 @@ After typing plantuml syntax press alt+D to render the image
 
 [x] [Use icons]
 
+- from URL / CDN example:
+
+    ```
+    !define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v2.1.0
+    !includeurl ICONURL/common.puml
+    ```
+- 
+
+> in order to use icons in the diagram, use any of the following at the header of the uml file with ``!include`` directives. if a CDN is provided then 
+>
+> Amazon - https://github.com/milo-minderbinder/AWS-PlantUML
+>
+> Azure - https://github.com/RicardoNiepel/Azure-PlantUML/
+>
+> Cloud Insight - https://github.com/rabelenda/cicon-plantuml-sprites
+>
+> Devicons and Font Awesome - https://github.com/tupadr3/plantuml-icon-font-sprites
+>
+> Google Material - https://github.com/Templarian/MaterialDesign
+>
+> Office - https://github.com/Roemer/plantuml-office
+>
+> Archimate - https://github.com/ebbypeter/Archimate-PlantUML
+
+For Further Usage see the ``example_icons.puml`` file
+
+
 [x] [Use styles]
+
 
 
 #### Supported Formats

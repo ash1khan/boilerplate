@@ -1,0 +1,82 @@
+' Component Diagram
+' Description - It describes the organization of physical software components, including source code, run-time (binary) code, and executables
+
+' Relation between component symbols
+' ----------------------------
+' |     Type    |   Symbol   |
+' |-------------|------------|
+' | Extension   |   <|--     |
+' | Composition |   *--      |
+' | Aggregation |   o--      |
+' ----------------------------
+' replace -- by .. to have a dotted line
+
+' Class Seperations
+' -------------------------------------
+' |     Seperators    |     Symbol    |
+' |-------------------|---------------|
+' |      noraml       |      --       |
+' |     protected     |      ==       |
+' | package private   |      ..       |
+' |     public        |      __       |
+' -------------------------------------
+
+' direction 
+' [Component] -left-> left 
+' [Component] -right-> right 
+' [Component] -up-> up
+' [Component] -down-> down
+
+@startuml
+' Style area
+
+' Icons area
+
+' Skip Parameteres
+
+' Header Title area
+
+' component definition
+[First Component]
+[Second component] as Comp2  
+component Comp3
+component [Last\ncomponent] as Comp4
+
+' interface definition
+() "First Interface"
+() "Second Interface" as Interf2
+interface Interf3
+interface "Last\ninterface" as Interf4
+
+' package definition
+package "Package Group" {
+  HTTP - [Component A]
+  [Component B]
+}
+
+' node definition
+node "Node Groups" {
+  FTP - [Component C]
+  [Component D] --> FTP
+} 
+
+' cloud definition
+cloud {
+  [Example 1]
+}
+
+' database definition
+database "Mongodb" {
+    ' folder
+    folder "This is my folder" {
+	    [Collections]
+    }
+    ' frame
+    frame "Foo" {
+	    [Frame 4]
+    }
+}
+
+' relations
+
+@enduml

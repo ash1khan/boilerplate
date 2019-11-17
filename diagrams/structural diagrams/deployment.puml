@@ -1,0 +1,53 @@
+' Deployment Diagram
+' Description - It depicts the physical resources in a system, including nodes, components, and connections
+
+' Relation between component symbols
+' ----------------------------
+' |     Type    |   Symbol   |
+' |-------------|------------|
+' | Extension   |   <|--     |
+' | Composition |   *--      |
+' | Aggregation |   o--      |
+' ----------------------------
+' replace -- by .. to have a dotted line
+
+' Seperations
+' ---------------------------
+' |  Seperators  |  Symbol  |
+' |--------------|----------|
+' |   type 1     |    --    |
+' |   type 2     |    ==    |
+' |   type 3     |    ..    |
+' |   type 4     |    __    |
+' ---------------------------
+
+' direction 
+' [Component] -left-> left 
+' [Component] -right-> right 
+' [Component] -up-> up
+' [Component] -down-> down
+
+@startuml
+actor actor
+agent agent
+artifact artifact
+boundary boundary
+card card
+cloud cloud
+component component
+control control
+database database
+entity entity
+file file
+folder folder
+frame frame
+interface  interface
+node node
+package package
+queue queue
+stack stack
+rectangle rectangle
+storage storage
+usecase usecase
+
+@enduml

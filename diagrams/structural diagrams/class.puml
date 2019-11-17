@@ -1,0 +1,80 @@
+' Class Diagram
+' Description - It describes the static structure of a system
+
+' Relation between classes symbols
+' ----------------------------
+' |     Type    |   Symbol   |
+' |-------------|------------|
+' | Extension   |   <|--     |
+' | Composition |   *--      |
+' | Aggregation |   o--      |
+' ----------------------------
+' replace -- by .. to have a dotted line
+
+' Defining visibility
+' -------------------------------------
+' |     Visibility    |   Character   |
+' |-------------------|---------------|
+' |     private       |       -       |
+' |     protected     |       #       |
+' | package private   |       ~       |
+' |     public        |       +       |
+' -------------------------------------
+
+' Seperations
+' -------------------------------------
+' |     Seperators    |     Symbol    |
+' |-------------------|---------------|
+' |      noraml       |      --       |
+' |     protected     |      ==       |
+' | package private   |      ..       |
+' |     public        |      __       |
+' -------------------------------------
+
+@startuml
+' Style area
+
+' Icons area
+
+' Skip Parameteres here
+' Header Title area
+
+' class definition
+class Dummy1 {
+    {static} id : Integer
+    .. variables ..
+    {field} +_varibale1 : Float
+    {field} -_variable2 : Date
+    {field} #_variable3 : String
+    .. list ..
+    Object[] elementData
+    ==
+    {abstract} abstract_method()
+    __ class methods __
+    {method} +methods1()
+    {method} -methods2()
+    {method} #methods3()
+}
+
+class Dummy2 <<abstract>> {
+    {static} id : Integer
+    .. variables ..
+    {field} +_varibale1 : Float
+    {field} -_variable2 : Date
+    {field} #_variable3 : String
+    .. list ..
+    Object[] elementData
+    ==
+    {abstract} abstract_method()
+    __ class methods __
+    {method} +methods1()
+    {method} -methods2()
+    {method} #methods3()
+}
+
+' Relations
+Dummy2 "1" *-- "many" Dummy1 : contains
+Dummy1 <|-- Dummy2 : aggregation
+Dummy1 --|> SomeClass
+
+@enduml
