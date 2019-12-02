@@ -2,24 +2,16 @@
 ' Description - It describes the organization of physical software components, including source code, run-time (binary) code, and executables
 
 ' Relation between component symbols
-' ----------------------------
-' |     Type    |   Symbol   |
-' |-------------|------------|
-' | Extension   |   <|--     |
-' | Composition |   *--      |
-' | Aggregation |   o--      |
-' ----------------------------
-' replace -- by .. to have a dotted line
+' ---------------
+' |    Symbol   |
+' |-------------|
+' |      -      |
+' |     <..     |
+' |     <--     |
+' ---------------
 
-' Class Seperations
-' -------------------------------------
-' |     Seperators    |     Symbol    |
-' |-------------------|---------------|
-' |      noraml       |      --       |
-' |     protected     |      ==       |
-' | package private   |      ..       |
-' |     public        |      __       |
-' -------------------------------------
+' component colorization
+' component  [Web Server] #Yellow
 
 ' direction 
 ' [Component] -left-> left 
@@ -77,6 +69,6 @@ database "Mongodb" {
     }
 }
 
-' relations
+' connection and relations
 
 @enduml

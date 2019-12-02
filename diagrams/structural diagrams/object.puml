@@ -1,5 +1,5 @@
 ' Object Diagram
-' Description -
+' Description - Object diagrams describe the static structure of a system at a particular time. They can be used to test class diagrams for accuracy
 
 @startuml
 actor Foo1

@@ -8,8 +8,15 @@
 ' | Extension   |   <|--     |
 ' | Composition |   *--      |
 ' | Aggregation |   o--      |
+' |             |   #--      |
+' |             |   x--      |
+' | Dependancy  |   }--      |
+' | Inheritance |   ^--      |
+' |             |   +--      |
+' | Association |   --       |
 ' ----------------------------
 ' replace -- by .. to have a dotted line
+' can be used in two side. e.g: <--*
 
 ' Defining visibility
 ' -------------------------------------
@@ -21,6 +28,16 @@
 ' |     public        |       +       |
 ' -------------------------------------
 
+' class inner seperator
+' --------------------------------------
+' |       Type       |      Symbol     |
+' |------------------|-----------------|
+' |    dotted line   |  ..something..  |
+' |    single line   |  __something__  |
+' |    dashed line   |  --something--  |
+' |    double line   |  ==something==  |
+' --------------------------------------
+
 ' Seperations
 ' -------------------------------------
 ' |     Seperators    |     Symbol    |
@@ -30,6 +47,18 @@
 ' | package private   |      ..       |
 ' |     public        |      __       |
 ' -------------------------------------
+
+' relation line can have annotaion with
+' class2 "1" *-- "many" class1 : contains
+
+' Notes
+' 1. note top of Object : In java, every class\nextends this one.
+' note "This is a floating note" as N1
+' note "This note is connected\nto several objects." as N2
+' Object .. N2
+' N2 .. ArrayList
+'class Foo
+'note left: On last defined class
 
 @startuml
 ' Style area
@@ -71,10 +100,13 @@ class Dummy2 <<abstract>> {
     {method} -methods2()
     {method} #methods3()
 }
-
-' Relations
-Dummy2 "1" *-- "many" Dummy1 : contains
-Dummy1 <|-- Dummy2 : aggregation
-Dummy1 --|> SomeClass
+Class1 #-- Class2
+Class3 x-- Class4
+Class5 }-- Class6
+Class7 +-- Class8
+Class9 ^-- Class10
+Class11 *-- Class12
+Class13 o-- Class14
+' connection and relations
 
 @enduml

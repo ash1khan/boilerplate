@@ -1,33 +1,26 @@
 ' Deployment Diagram
 ' Description - It depicts the physical resources in a system, including nodes, components, and connections
 
-' Relation between component symbols
-' ----------------------------
-' |     Type    |   Symbol   |
-' |-------------|------------|
-' | Extension   |   <|--     |
-' | Composition |   *--      |
-' | Aggregation |   o--      |
-' ----------------------------
-' replace -- by .. to have a dotted line
-
-' Seperations
-' ---------------------------
-' |  Seperators  |  Symbol  |
-' |--------------|----------|
-' |   type 1     |    --    |
-' |   type 2     |    ==    |
-' |   type 3     |    ..    |
-' |   type 4     |    __    |
-' ---------------------------
-
-' direction 
-' [Component] -left-> left 
-' [Component] -right-> right 
-' [Component] -up-> up
-' [Component] -down-> down
+' Relation in between symbols
+' --------------
+' |   Symbol   |
+' |------------|
+' |     --     |
+' |     ..     |
+' |     ~~     |
+' |     ==     |
+' --------------
 
 @startuml
+' Style area
+
+' Icons area
+
+' Skip Parameteres
+
+' Header Title area
+
+' all deployment key definition
 actor actor
 agent agent
 artifact artifact
@@ -49,5 +42,10 @@ stack stack
 rectangle rectangle
 storage storage
 usecase usecase
+
+actor1 -- actor2 : label1
+actor1 .. actor3 : label2
+actor1 ~~ actor4 : label3
+actor1 == actor5
 
 @enduml
