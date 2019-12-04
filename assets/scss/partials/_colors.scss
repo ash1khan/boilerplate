@@ -1,0 +1,123 @@
+// === COLORS ===
+/* 
+This file contains all the color and theme info for the main file
+use lighten(main_color, percentage) to saturate color
+use darken(main_color, percentage) to desaturate color 
+*/
+// Allowed values: Dark, Light, Default
+$theme: Light;
+$parcentage: 3%;
+// Nutral Colors ========================================
+$grey-500: #222222;                         // original neutral color
+$grey-400: lighten($grey-500, $parcentage);
+$grey-300: lighten($grey-400, $parcentage);
+$grey-200: lighten($grey-300, $parcentage);
+$grey-100: lighten($grey-200, $parcentage);
+$grey-600: darken($grey-500, $parcentage);
+$grey-700: darken($grey-600, $parcentage);
+$grey-800: darken($grey-700, $parcentage);
+$grey-900: darken($grey-800, $parcentage);
+
+$warning-500: #222222;                      // original warning color
+$warning-400: lighten($warning-500, $parcentage);
+$warning-300: lighten($warning-400, $parcentage);
+$warning-200: lighten($warning-300, $parcentage);
+$warning-100: lighten($warning-200, $parcentage);
+$warning-600: darken($warning-500, $parcentage);
+$warning-700: darken($warning-600, $parcentage);
+$warning-800: darken($warning-700, $parcentage);
+$warning-900: darken($warning-800, $parcentage);
+
+$danger-500: #222222;                       // original danger color
+$danger-400: lighten($danger-500, $parcentage);
+$danger-300: lighten($danger-400, $parcentage);
+$danger-200: lighten($danger-300, $parcentage);
+$danger-100: lighten($danger-200, $parcentage);
+$danger-600: darken($danger-500, $parcentage);
+$danger-700: darken($danger-600, $parcentage);
+$danger-800: darken($danger-700, $parcentage);
+$danger-900: darken($danger-800, $parcentage);
+
+$success-500: #222222;                       // original success color
+$success-400: lighten($success-500, $parcentage);
+$success-300: lighten($success-400, $parcentage);
+$success-200: lighten($success-300, $parcentage);
+$success-100: lighten($success-200, $parcentage);
+$success-600: darken($success-500, $parcentage);
+$success-700: darken($success-600, $parcentage);
+$success-800: darken($success-700, $parcentage);
+$success-900: darken($success-800, $parcentage);
+
+$notification-500: #222222;                   // original notification color
+$notification-400: lighten($notification-500, $parcentage);
+$notification-300: lighten($notification-400, $parcentage);
+$notification-200: lighten($notification-300, $parcentage);
+$notification-100: lighten($notification-200, $parcentage);
+$notification-600: darken($notification-500, $parcentage);
+$notification-700: darken($notification-600, $parcentage);
+$notification-800: darken($notification-700, $parcentage);
+$notification-900: darken($notification-800, $parcentage);
+
+// === THEME ===
+// Main colors =========================================
+$base: #222222;           // used for the main base color
+$primary: #ff8040;        // primary color profile
+$secondary: #ffffff;      // accent color profile
+$ternary: #222222;        // subtle color profile
+$highlight: #aeeef7;      // extra highlight color profile
+$outline: #ffffff;
+
+// Text Colors ==========================================
+$main-text: #ebebeb;
+$secondary-text: #ffffff;
+$ternary-text: #ffffff;
+
+// Extra Colors =========================================
+$link: #ff8040;
+$menu-item: #ffffff;
+$sidebar-left: rgba(250, 57, 57, 0.5);
+$sidebar-right: rgba(163, 250, 104, 0.5);
+$content: rgba(147, 57, 250, 0.5);
+$teaser: rgba(255, 157, 239, 0.5);
+$footer: rgba(245, 236, 119, 0.5);
+
+// Color Variants =======================================
+@if $theme == Dark {
+    // Main colors =========================================
+    $base: #222222;           // used for the main base color
+    $primary: #ff8040;        // primary color profile
+    $secondary: #ffffff;      // accent color profile
+    $ternary: #222222;        // subtle color profile
+    $highlight: #aeeef7;      // extra highlight color profile
+    $outline: #ffffff;
+
+    // Text Colors ==========================================
+    $main-text: #ebebeb;
+    $secondary-text: #ffffff;
+    $ternary-text: #ffffff;
+
+    // Extra Colors =========================================
+    $link: #ff8040;
+    $menu-item: #ffffff;
+
+    // Color Variants =======================================
+} @else if $theme == Light {
+    // Main colors =========================================
+    $base: #efefef;           // used for the main base color
+    $primary: #ff8040;        // primary color profile
+    $secondary: #ffffff;      // accent color profile
+    $ternary: #222222;        // subtle color profile
+    $highlight: #aeeef7;      // extra highlight color profile
+    $outline: #ffffff;
+
+    // Text Colors ==========================================
+    $main-text: #292929;
+    $secondary-text: #202020;
+    $ternary-text: #181818;
+
+    // Extra Colors =========================================
+    $link: #ff8040;
+    $menu-item: #ffffff;
+
+    // Color Variants =======================================
+}

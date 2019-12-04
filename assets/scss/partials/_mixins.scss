@@ -2,9 +2,9 @@
 // This file contains all the mixin formula for the main file
 
 // google font imports mixin
-@mixin google-font($font) {
-    $font: unquote($font);
-    @import url(https://fonts.googleapis.com.css?family=#{$font});
+@mixin google-font($fontname) {
+    $fontname: unquote($fontname);
+    @import url(https://fonts.googleapis.com/css?family=#{$fontname}&display=swap);
 }
 
 // media queries mixin

@@ -1,0 +1,10 @@
+// === FUNCTIONS ===
+// This file contains all the functions for the main file
+
+@function sum($left, $right) {
+    @return $left + $right;
+}
+
+@function em($pixels, $context: 16px) {
+    @return ($pixels / $context) * 1em;
+}

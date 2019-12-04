@@ -1,12 +1,10 @@
 // === FONTS ===
 // This file contains all the fonts info for the main file
 
-@import 'mixins';
-
-@include google-font("Alegreya+Sans");
+@include google-font("Fira+Sans");
 @include google-font("Titillium+Web");
 
-$main-font: "Alegreya Sans", Arial, sans-serif;
+$main-font: 'Fira Sans', sans-serif;
 $headline-font: 'Titillium Web', Georgia, serif;
 $paragraph-font: Verdana, Arial, sans-serif;
 $extra-font: Verdana, Arial, sans-serif;

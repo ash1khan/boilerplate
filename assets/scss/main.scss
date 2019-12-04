@@ -1,0 +1,177 @@
+// Main style entry point
+
+// import types ================== 
+// @import url();
+// @import "http://";
+// @import "filename";
+// @import "style-screen" screen;
+
+// extends rules ====================
+// normal extends -------------------
+// .warning {
+    // color: red;
+// }
+// .warning-button {
+    // @extends .warning;
+    // border: 1px solid #fefefe;
+// }
+// temporary extends ----------------
+// %highlight {
+    // font-style: italic;
+// }
+// .sub-title {
+    // @extends %highlight;
+    // font-size: 20px;
+// }
+
+// conditionals =====================
+// $contrast: high;
+// body {
+    // @if $contrast == high {
+        // color: #222222;
+    // } @else if $contrast == low {
+        // color: #ffffff;
+    // } @else {
+        // color: #efefef;
+    // }
+// }
+
+// Loops ===========================
+// inclusive 1 to 6 ----------------
+// @for $e from 1 through 6 {
+    // .col-#{$e} {
+        // width: $e * 2em;
+    // }
+// }
+// exclusive 1 to 5 ----------------
+// @for $e from 1 to 6 {
+    // .col-#{$e} {
+        // width: $e * 2em;
+    // }
+// }
+// each ----------------------------
+// $speakers: Ani, Nadim, Quentine;
+// @each $speaker in $speakers {
+    // .#{$speaker}-profile {
+        // background-image: url('/img/#{$speaker}.png')
+    // }
+// } 
+
+// IMPORTS =========================================
+@import "partials/normalize";               // import required normalize for susy
+@import "susy";                             // import susy toolkit for grid
+@import "breakpoint";                       // import breakpoint toolkit for media query
+@import "compass";                          // import compass toolkit
+@import "partials/colors";                  // import all colors
+@import "partials/mixins";                  // import all mixin formula
+@import "partials/typography";              // import all fonts
+@import "partials/sizes";                   // import all sizes
+@import "partials/functions";               // import all functions
+
+// susy configuration
+$susy: (
+    columns: 16,
+    debug: (image:show),
+    global-box-sizing: border-sizing
+    // for more settings visit https://susy.readthedocs.io/settings/
+);
+
+// === DEFAULT ELEMENTS ===
+body {
+    background: $base;
+    font-family: $main-font;
+    color: $main-text;
+    @include small-screen {
+        font-size: 125%;
+    }
+}
+
+h1, h2, h3, h4 {
+    font-family: $headline-font;
+}
+
+p {
+    font-family: $paragraph-font;
+}
+
+@include links;
+a { 
+    color: $link;
+}
+
+// @include here;
+@include border-box-sizing;
+
+// extra style here 
+.container {
+    @include container($container-width);
+}
+.sidebar-left {
+    height: 80vh;
+    background-color: $sidebar-left;
+    display: none;
+
+    @include breakpoint($medium-screen) {
+        display: block;
+        @include span(2 of 16);
+    }
+}
+
+.main {
+    height: 80vh;
+    @include breakpoint($medium-screen) {
+        @include span(10 of 16);
+    }
+
+    .content {
+        height: 60vh;
+        background-color: $content;
+
+    }
+
+    .teaser {
+        height: 20vh;
+        background-color: $teaser;
+        padding: gutter(10);
+        @include span(10 of 10);
+
+        @include breakpoint($medium-screen) {
+            @include span(2 of 10);
+            &:nth-child(5n) {
+                @include last;
+            }
+        }
+    } 
+    
+}
+
+.sidebar-right {
+    height: 80vh;
+    background-color: $sidebar-right;
+    clear: both;
+    @include breakpoint($medium-screen) {
+        clear: none;
+        @include span(4 of 16 last);
+    }
+}
+
+.footer {
+    clear: both;
+    height: 20vh;
+    background-color: $footer;
+}
+
+.warning-button {
+    @include warning;
+    padding: 8px 12px;
+}
+
+.header {
+    text-align: center;
+    background: $primary;
+    @include rounded(10px);
+    @include large-screen {
+        width: auto;
+    }
+}
+
