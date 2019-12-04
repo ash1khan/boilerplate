@@ -5,15 +5,15 @@ Everything organized as branch. So choose appropriate branch and follow the step
 
 ## Contains
 
-# [x] [Scss](https://github.com/PandorAstrum/boilerplate/tree/scss)  
+# :heavy_check_mark: [Scss](https://github.com/PandorAstrum/boilerplate/tree/scss)  
 
 [![Scss Version][scss-image]][scss-url]
 
-# [-] [Readme Template](https://github.com/PandorAstrum/boilerplate/tree/readme_template)  
+:heavy_check_mark: [Readme Template](https://github.com/PandorAstrum/boilerplate/tree/readme_template)  
 
 [![Readme.md][readme-image]][readme-url]
 
-# [-] [UML](https://github.com/PandorAstrum/boilerplate/tree/uml)  
+:heavy_check_mark: # [-] [UML](https://github.com/PandorAstrum/boilerplate/tree/uml)  
 
 [![UML Version][uml-image]][uml-url]
 
